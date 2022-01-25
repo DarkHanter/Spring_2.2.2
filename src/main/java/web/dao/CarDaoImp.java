@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 
 @Repository
 public class CarDaoImp implements CarDao {
-    @Override
-    public List<Car> listCars() {
+
+    public List<Car> carList() {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Honda", "S1", 25));
         cars.add(new Car("Toyota", "S2", 13));
@@ -21,10 +21,10 @@ public class CarDaoImp implements CarDao {
     }
 
     @Override
-    public List<Car> CarsFromList(List<Car> cars, Integer counter) {
+    public List<Car> carsFromList(Integer counter) {
         if(counter != null) {
-            return cars.stream().limit(counter).collect(Collectors.toList());
+            return carList().stream().limit(counter).collect(Collectors.toList());
         }
-        return cars;
+        return carList();
     }
 }

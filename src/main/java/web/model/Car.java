@@ -34,13 +34,4 @@ public class Car {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-
-    /*@Override
-    public String toString() {
-        return "User [" +
-                "model=" + model +
-                ", series='" + series + '\'' +
-                ", amount='" + amount + '\'' +
-                ']';
-    }*/
 }
